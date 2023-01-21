@@ -12,8 +12,8 @@ function initiliaze() {
     throw Error("Palindrome word must have an odd length");
   }
   const mid = palindromeLength / 2;
-  let lookup = {};
-  lookup = { ...lookup, ...crossSection(mid, PALINDROME) };
+ 
+  const lookup = {  ...crossSection(mid, PALINDROME) };
   console.log(lookup);
   return lookup;
 }
