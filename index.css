@@ -1,0 +1,45 @@
+:root {
+  --background: #3b3b3b;
+  --accent: #009688;
+  --accent-hover: #00af9e;
+}
+
+body {
+  user-select: none;
+  background: var(--background);
+  height: 100%; 
+  /* overflow: hidden; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-board {
+  display: grid;
+  /* height: 100%;  */
+
+  grid-template-columns: repeat(var(--length), 50px);
+  grid-auto-rows: 50px;
+  gap: 3px;
+}
+.grid-item {
+  background: #555555;
+  border-radius: 4px;
+  transition: background-color 2s ease;
+  cursor: default;
+}
+.grid-item:hover{
+  background-color: #707070;
+}
+.grid-item.active {
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;;
+}
+.grid-item.active:hover {
+  background-color: var(--accent-hover);
+}
